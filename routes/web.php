@@ -3,7 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/tentang', fn () => "Nama ku king udon {$_GET['name']}");
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+
+Route::get('/tentang', function () {
+    return view('tentang');
+});
